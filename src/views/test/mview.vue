@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="page" :style="{backgroundImage: 'url(' + img + ')' }">
         <video-player class="video-player vjs-custom-skin"
                       ref="videoPlayer"
                       :playsinline="true"
@@ -10,12 +10,14 @@
 
 <script>
  //这个个配置m3u8格式的,现在出错了
+ import img from '@/assets/maomi.jpg'
 export default {
     props: {
 
     },
     data() {
         return {
+            img,
             url:'',
              playerOptions: {
                     //播放速度
@@ -80,5 +82,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
+.page {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
 </style>

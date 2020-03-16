@@ -62,7 +62,8 @@ export default {
     width: 100%;
     height: 100%;
     background-color: #fff;
-    background-size: contain;
+    background-size: 100%;
+    background-repeat: no-repeat;
     overflow: auto;
 }
 .block {
